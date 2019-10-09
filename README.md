@@ -1,5 +1,11 @@
 # Blog App  
 
+## Installation
+Install the project dependencies using:
+```
+pip install -r requirements.txt
+```
+
 ## Screenshots
 ### Home Page
 ![Home Page Screenshot](screenshots/home-page.png "Home Page")
