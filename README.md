@@ -1,8 +1,12 @@
 # Blog App  
-This project was made using Python 3.
+This project uses the following:
+- **Python** : 3.6.8
+- **Postgres** : 10.10 
+
 
 ## Installation
-Install the project dependencies using:
+- Make sure postgres is installed on your system, then change the postgres user credentials over [here](src/blog_task/blog_task/settings.py#L71) and database name over [here](src/blog_task/blog_task/settings.py#L70)
+- Install the project dependencies using:
 ```
 pip install -r requirements.txt
 ```
