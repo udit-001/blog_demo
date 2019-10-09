@@ -1,0 +1,48 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="blog-me pt-100 pb-100" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 mx-auto text-center">
+                <div class="section-title mb-100">
+                    <h4>Latest Posts</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-lg-4 col-md-6">
+                <!-- Single Blog -->
+                <div class="single-blog">
+                    <div class="blog-img">
+                        <img src="{{ post.featured_image.url }}" alt="">
+                        <div class="post-category">
+                            <a href="#">{{ post.category }}</a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-title">
+                            <h4><a href="#">{{ post.title }}</a></h4>
+                            <div class="meta">
+                                <ul>
+                                    <li>{{ post.created_at | date:"M d, Y"}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p>{{ post.overview }}</p>
+                        <a href="{{ post.get_absolute_url }}" class="box_btn">read more</a>
+                        {% comment %} <a href="{% url 'edit' post.id %}" class="box_btn">Edit</a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

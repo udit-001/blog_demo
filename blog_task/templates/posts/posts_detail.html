@@ -1,0 +1,57 @@
+{% extends 'layouts/base.html' %}
+{% block title %}
+{{ post.seo_title }} - Blog App
+{% endblock %}
+
+{% block head %}
+    <!--SEO Tags-->
+    <meta name="description"
+        content="{{ post.seo_description }}">
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="{{ post.seo_title }} - Blog App">
+    <meta itemprop="description"
+        content="{{ post.seo_description }}">
+
+
+    <meta property="og:url" content="{{ post.get_absolute_url }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ post.seo_title }} - Blog App">
+    <meta property="og:description"
+        content="{{ post.seo_description }}">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ post.seo_title }} - Blog App">
+    <meta name="twitter:description"
+        content="{{ post.seo_description }}">
+
+    {% if post.featured_image %}
+    <meta itemprop="image" content="{{ post.featured_image.url }}">
+    <meta property="og:image" content="{{ post.featured_image.url }}">
+    <meta name="twitter:image" content="{{ post.featured_image.url }}">
+    {% endif %}
+
+{% endblock head %}
+
+{% block content %}
+<div class="container mt-3 mb-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <h1 class="mt-4">{{ post.title }}</h1>
+
+            <hr>
+            <p>Posted on {{ post.created_at |date:"M d, Y g:i A"}}</p>
+            <hr>
+          
+            <img class="card-img-top" src="{{ post.featured_image.url }}" alt="Card image cap">
+
+            <hr>
+            {{ post.content | safe }}
+
+        </div>
+          
+    </div>
+
+</div>
+{% endblock %}
