@@ -19,7 +19,7 @@ python manage.py runserver
 
 ## Screenshots
 ### Home Page
-![Home Page Screenshot](screenshots/home-page.png "Home Page")
+![Home Page Screenshot](screenshots/home-page.png "Home Page Screen")
 
 ### Blog Post Page
 ![Blog Post](screenshots/post.png "Blog Post")
