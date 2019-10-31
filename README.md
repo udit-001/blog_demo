@@ -5,7 +5,7 @@ This project uses the following:
 
 
 ## Installation
-- Make sure postgres is installed on your system, then change the postgres user credentials over [here](src/blog_task/blog_task/settings.py#L71) and database name over [here](src/blog_task/blog_task/settings.py#L70)
+- Make sure PostgreSQL is installed on your system, then change the postgres user credentials over [here](src/blog_task/blog_task/settings.py#L71) and database name over [here](src/blog_task/blog_task/settings.py#L70)
 - Install the project dependencies using:
 ```
 pip install -r requirements.txt
