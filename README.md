@@ -25,4 +25,4 @@ python manage.py runserver
 ![Blog Post](screenshots/post.png "Blog Post")
 
 ### Create Post Page
-![Create Post Page](screenshots/create-post.png "Create Post")
+![Create Post Page](screenshots/create-post.png "Create Post Screen")
