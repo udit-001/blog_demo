@@ -22,7 +22,7 @@ python manage.py runserver
 ![Home Page Screenshot](screenshots/home-page.png "Home Page Screen")
 
 ### Blog Post Page
-![Blog Post](screenshots/post.png "Blog Post")
+![Blog Post](screenshots/post.png "Blog Post Screen")
 
 ### Create Post Page
 ![Create Post Page](screenshots/create-post.png "Create Post Screen")
